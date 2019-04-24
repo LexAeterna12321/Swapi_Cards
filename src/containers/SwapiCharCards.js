@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import SwapiCharCard from "../components/SwapiCharCard";
-
+import Avatar from "../components/Avatar";
+import Description from "../components/Description";
 class SwapiCharCards extends Component {
   state = { chars: [] };
   apiURL = `https://swapi.co/api`;
@@ -20,13 +21,23 @@ class SwapiCharCards extends Component {
 
   render() {
     const { chars } = this.state;
-    console.log({ chars });
     return (
       <div className="container">
         <div className="cards">
-          {chars.map(char => (
-            <SwapiCharCard key={char.url} char={char} />
-          ))}
+          {chars.map(char => {
+            const { name, birth_year, gender, url } = char;
+
+            return (
+              <SwapiCharCard key={url}>
+                <Avatar name={name} />
+                <Description
+                  name={name}
+                  birth_year={birth_year}
+                  gender={gender}
+                />
+              </SwapiCharCard>
+            );
+          })}
         </div>
       </div>
     );
