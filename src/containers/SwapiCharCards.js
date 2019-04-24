@@ -3,6 +3,7 @@ import axios from "axios";
 import SwapiCharCard from "../components/SwapiCharCard";
 import Avatar from "../components/Avatar";
 import Description from "../components/Description";
+
 class SwapiCharCards extends Component {
   state = { chars: [] };
   apiURL = `https://swapi.co/api`;
