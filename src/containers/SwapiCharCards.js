@@ -3,15 +3,18 @@ import axios from "axios";
 import SwapiCharCard from "../components/SwapiCharCard";
 import Avatar from "../components/Avatar";
 import Description from "../components/Description";
-
+import { Container, Cards } from "../components/styledComponents";
 class SwapiCharCards extends Component {
   state = { chars: [] };
   apiURL = `https://swapi.co/api`;
+
   componentDidMount() {
-    this.getData().then(chars => this.setState({ chars: [...chars] }));
+    this.getCharsPersonalData().then(chars =>
+      this.setState({ chars: [...chars] })
+    );
   }
 
-  getData = async () => {
+  getCharsPersonalData = async () => {
     const response = await axios.get(`${this.apiURL}/people`);
     const {
       data: { results }
@@ -23,8 +26,8 @@ class SwapiCharCards extends Component {
   render() {
     const { chars } = this.state;
     return (
-      <div className="container">
-        <div className="cards">
+      <Container>
+        <Cards>
           {chars.map(char => {
             const { name, birth_year, gender, url } = char;
 
@@ -39,8 +42,8 @@ class SwapiCharCards extends Component {
               </SwapiCharCard>
             );
           })}
-        </div>
-      </div>
+        </Cards>
+      </Container>
     );
   }
 }

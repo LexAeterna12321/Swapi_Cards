@@ -16,7 +16,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         <h3>
@@ -29,7 +29,6 @@ ShallowWrapper {
           Gender: 
         </p>,
       ],
-      "className": "card__description",
     },
     "ref": null,
     "rendered": Array [
@@ -85,13 +84,34 @@ ShallowWrapper {
         "type": "p",
       },
     ],
-    "type": "section",
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-EHOje",
+        "isStatic": true,
+        "rules": Array [
+          "
+  padding: 20px;
+  text-transform: uppercase;
+",
+        ],
+      },
+      "displayName": "styled.section",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-EHOje",
+      "target": "section",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           <h3>
@@ -104,7 +124,6 @@ ShallowWrapper {
             Gender: 
           </p>,
         ],
-        "className": "card__description",
       },
       "ref": null,
       "rendered": Array [
@@ -160,7 +179,28 @@ ShallowWrapper {
           "type": "p",
         },
       ],
-      "type": "section",
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-EHOje",
+          "isStatic": true,
+          "rules": Array [
+            "
+  padding: 20px;
+  text-transform: uppercase;
+",
+          ],
+        },
+        "displayName": "styled.section",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-EHOje",
+        "target": "section",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {

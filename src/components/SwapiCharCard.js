@@ -1,6 +1,12 @@
 import React from "react";
-const SwapiCharCard = ({ children }) => {
-  return <div className="cards__card">{children}</div>;
+import PropTypes from "prop-types";
+import { Card } from "./styledComponents";
+
+const SwapiCharCard = ({ children }) => <Card>{children}</Card>;
+
+SwapiCharCard.propTypes = {
+  Avatar: PropTypes.element,
+  Description: PropTypes.element
 };
 
 export default SwapiCharCard;
